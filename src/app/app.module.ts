@@ -22,7 +22,6 @@ import {MatTableModule} from '@angular/material/table';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { EditComponent } from './category/categories/edit/edit.component';
 import {MatTabsModule} from '@angular/material/tabs';
-import { TestComponent } from './test/test.component';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import { MatInputModule, MatIconModule, MatButtonModule } from '@angular/material';
@@ -64,7 +63,6 @@ import { LastComponent } from './category/last/last.component';
     ProductsComponent,
     CategoriesComponent,
     EditComponent,
-    TestComponent,
     OptionsComponent,
     AttributesComponent,
     ReviewsComponent,
@@ -109,7 +107,6 @@ import { LastComponent } from './category/last/last.component';
       { path: '', redirectTo: 'admin', pathMatch: 'full' },
       { path: 'admin', component: MainContentComponent   },
       { path: 'sidebar', component: SidebarComponent  },
-      { path: 'test', component: TestComponent  },
       { path: 'forms', component: FormsComponent  },
       { path: 'footer', component: FooterComponent  } ,
       { path: 'category/categories', component: CategoriesComponent  },
