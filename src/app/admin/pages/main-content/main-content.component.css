@@ -1,0 +1,4 @@
+form.ng-untouched.ng-pristine.ng-valid,
+form.ng-valid.ng-dirty.ng-touched {
+  background-color: #fff;
+}

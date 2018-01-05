@@ -1,0 +1,126 @@
+<mat-toolbar>
+    :Categories: edit
+    </mat-toolbar>
+<div class="container">
+  <mat-tab-group>
+    <mat-tab label="General">
+      <div class="example-container">
+        <br>
+        <br>
+        <mat-form-field>
+          <input matInput placeholder="Category Name">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Short code">
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Meta tag description"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+          <textarea matInput placeholder="Meta tag Keyword"></textarea>
+        </mat-form-field>
+        <br>
+        <br>
+        <br>
+        <div [froalaEditor]>Hello! </div>
+
+
+      </div>
+    </mat-tab>
+
+
+
+
+
+    <mat-tab label="Data">
+      <div class="example-container">
+
+        <br>
+        <br>
+        <br>
+
+        <!-- <mat-form-field>
+        <mat-select placeholder="Parent Category:	" [formControl]="animalControl" required>
+          <mat-option>--</mat-option>
+          <mat-option *ngFor="let animal of animals" [value]="animal">
+            {{animal.name}}
+          </mat-option>
+        </mat-select>
+        <mat-error *ngIf="animalControl.hasError('required')">Parent Category:	</mat-error>
+        <mat-hint>{{animalControl.value?.sound}}</mat-hint>
+
+      </mat-form-field> -->
+        <mat-form-field>
+          <mat-select placeholder="Select Parent Category">
+            <mat-option value="option">Option 1</mat-option>
+            <mat-option value="option">Option 2</mat-option>
+            <mat-option value="option">Option 3</mat-option>
+            <mat-option value="option">Option 4</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field>
+          <textarea matInput placeholder="Stories"></textarea>
+        </mat-form-field>
+        <div class="row">
+          <div class="col-md-2">
+            SEO Keyword:
+          </div>
+          <div class="col-md-10">
+            <mat-form-field class="example-container">
+              <input matInput placeholder="Do not use spaces instead replace spaces with - and make sure the keyword is globally unique.
+            ">
+            </mat-form-field>
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-2"><h4>
+          Vegetarian:
+        </h4></div>
+        <div class="col-md-9"><mat-radio-group>
+          <br>
+          <mat-radio-button value="1">Yes</mat-radio-button>
+          <mat-radio-button value="2">No</mat-radio-button>
+        </mat-radio-group>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <mat-radio-group class="example-radio-group" [(ngModel)]="deliveryMethod">
+        <mat-radio-button class="example-radio-button" *ngFor="let method of methods" [value]="method">
+          {{method}}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div class="example-selected-value">Your delivery option is: {{deliveryMethod}}</div>
+
+
+    </mat-tab>
+
+    <mat-tab label="Design">Design</mat-tab>
+    <mat-tab label="Available Time">
+      <br>
+      <br><br>
+
+      <div class="row">
+        <div class="col-md-2">Set default time	</div>
+        <div class="col-md-10">
+            <mat-radio-group>
+                <mat-radio-button value="1">No</mat-radio-button>
+                <mat-radio-button value="2">Yes</mat-radio-button>
+              </mat-radio-group>
+
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <br>
+  <br>
+
+  </div>

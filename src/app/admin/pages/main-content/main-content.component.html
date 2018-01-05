@@ -1,0 +1,40 @@
+<mat-toolbar>Dash board:-  </mat-toolbar>
+
+<div class="example-container mat-elevation-z8">
+  <mat-table #table [dataSource]="dataSource">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+    <!-- total Column -->
+    <ng-container matColumnDef="total">
+      <mat-header-cell *matHeaderCellDef>  <b>OverView</b> </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.total}} </mat-cell>
+    </ng-container>
+
+    <!-- amount Column -->
+    <ng-container matColumnDef="amount">
+      <mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.amount}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  <form   style="padding-left: 20px">
+      <mat-form-field>
+        <mat-select placeholder="Select Range" [(ngModel)]="selectedValue" name="food">
+          <mat-option *ngFor="let date of dates" [value]="date.value">
+            {{date.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <p> Selected value: {{selectedValue}} </p>
+    </form>
+
+
+
+</div>
+<mat-toolbar>Last 10 Orders:-  </mat-toolbar>
+
+<dash-last> </dash-last>
